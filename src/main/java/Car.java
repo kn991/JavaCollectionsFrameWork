@@ -26,6 +26,14 @@ public class Car {
         return Objects.hash(brand, number);
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", number=" + number +
+                '}';
+    }
+
     public String getBrand() {
         return brand;
     }
