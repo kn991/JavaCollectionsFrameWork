@@ -1,11 +1,18 @@
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class CarHashSet implements CarSet {
 
     private static final int INITIAL_CAPACITY = 16;
     private static final double LOAD_FACTOR = 0.75;
+
     private int size = 0;
     private Entry[] array = new Entry[INITIAL_CAPACITY];
+
+    // В реальности верхних строк кода не будет, а создается коллекция HashMap
+    private Map<Car, Object> map = new HashMap<>();
+    private Object object = new Object();
 
     @Override
     public boolean add(Car car) {
@@ -17,6 +24,12 @@ public class CarHashSet implements CarSet {
             size++;
         }
         return added;
+        // в реальности
+
+        // if (map.containsKey(car) {
+        //      return false;
+        // }
+        // map.put(car, object);
     }
 
     private boolean add(Car car, Entry[] dst) {
@@ -64,6 +77,10 @@ public class CarHashSet implements CarSet {
             }
         }
         return false;
+        // в реальности
+
+        // Object removed = map.remove(car);
+        // return removed != null;
     }
 
     @Override
@@ -85,6 +102,10 @@ public class CarHashSet implements CarSet {
             }
         }
         return false;
+
+        // в реальности
+        //
+        // return map.containsKey(car);
     }
 
     @Override
@@ -96,6 +117,10 @@ public class CarHashSet implements CarSet {
     public void clear() {
         array = new Entry[INITIAL_CAPACITY];
         size = 0;
+
+        // в реальности
+        //
+        // map.clear()
     }
 
     @Override
@@ -128,8 +153,13 @@ public class CarHashSet implements CarSet {
                 return result;
             }
         };
+
+        // в реальности
+        //
+        // return map.keySet().iterator();
     }
 
+    // В реальности следующие конструкции (increaseArray, getElementPosition и Entry не используются
     private void increaseArray() {
         Entry[] newArray = new Entry[array.length * 2];
         for (Entry entry : array) {

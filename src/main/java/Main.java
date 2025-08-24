@@ -1,7 +1,8 @@
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+
+    public void TreeSetExampleWithCars() {
         Set<Integer> numbers = new TreeSet<>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -15,5 +16,9 @@ public class Main {
         for (int number : numbers) {
             System.out.println(number);
         }
+    }
+
+    public static void main(String[] args) {
+        
     }
 }
