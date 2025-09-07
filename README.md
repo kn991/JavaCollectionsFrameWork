@@ -1,6 +1,8 @@
 # JavaCollectionsFrameWork
 Code from Stepik Java course
 
+**Частые вопросы по коллекциям с собеседований -** https://github.com/kn991/JavaCollectionsFrameWork/blob/main/InterviewQuestions.md
+
 ## Иерархия классов Collection Framework
 
 ![Иерархия1.png](imagesForReadme/%D0%98%D0%B5%D1%80%D0%B0%D1%80%D1%85%D0%B8%D1%8F1.png)
